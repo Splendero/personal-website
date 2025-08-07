@@ -1,0 +1,106 @@
+import ImageGallery from "@/components/ImageGallery";
+
+const Rugs = () => {
+  // Sample rug data - replace with your actual rug images
+  const rugImages = [
+    {
+      id: "1",
+      src: "/placeholder.svg",
+      alt: "Geometric Pattern Rug",
+      caption: "Geometric Harmony",
+      dimensions: "4' x 6'",
+      materials: "Wool blend, natural dyes"
+    },
+    {
+      id: "2", 
+      src: "/placeholder.svg",
+      alt: "Floral Design Rug",
+      caption: "Garden Blooms",
+      dimensions: "5' x 8'",
+      materials: "Hand-spun wool"
+    },
+    {
+      id: "3",
+      src: "/placeholder.svg", 
+      alt: "Abstract Modern Rug",
+      caption: "Modern Abstract",
+      dimensions: "3' x 5'",
+      materials: "Cotton and wool blend"
+    },
+    {
+      id: "4",
+      src: "/placeholder.svg",
+      alt: "Traditional Pattern Rug", 
+      caption: "Heritage Weave",
+      dimensions: "6' x 9'",
+      materials: "Pure wool, traditional techniques"
+    },
+    {
+      id: "5",
+      src: "/placeholder.svg",
+      alt: "Minimalist Rug",
+      caption: "Zen Simplicity", 
+      dimensions: "4' x 4'",
+      materials: "Organic cotton"
+    },
+    {
+      id: "6",
+      src: "/placeholder.svg",
+      alt: "Colorful Pattern Rug",
+      caption: "Vibrant Tapestry",
+      dimensions: "5' x 7'", 
+      materials: "Merino wool, natural dyes"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-subtle pt-24 pb-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+            Hand Tuffed
+            <span className="bg-gradient-primary bg-clip-text text-transparent"> Rugs</span>
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Each rug is tuffed using a rug tufting gun and using simple materials from the local craft store.
+            Using unique patterns and design hand drawn by me from inspiration from the internet for my friends and family.
+          </p>
+        </div>
+
+        {/* Gallery */}
+        <ImageGallery images={rugImages} columns={3} />
+
+        {/* Process Section */}
+        <div className="mt-24 text-center bg-gradient-warm rounded-2xl p-8 md:p-12">
+          <h2 className="text-3xl font-bold text-foreground mb-6">My Process</h2>
+          <div className="grid md:grid-cols-3 gap-8 text-left">
+            <div className="space-y-3">
+              <h3 className="text-xl font-semibold text-foreground">Design</h3>
+              <p className="text-muted-foreground">
+                Every rug begins with careful planning, drawing the design, and selecting 
+                color palettes, and projecting the design onto the rug.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <h3 className="text-xl font-semibold text-foreground">Materials</h3>
+              <p className="text-muted-foreground">
+                I use a monks clothes backing to tuft the rug into the fabric.
+                Then secure with super glue, cut the excess, and finish the backing with felt.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <h3 className="text-xl font-semibold text-foreground">Craftsmanship</h3>
+              <p className="text-muted-foreground">
+               Rugs are tufted using a rug tufting gun which can be a long and tedious process.
+               Which can take tens of hours of tufting alone to complete each rug.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Rugs;
