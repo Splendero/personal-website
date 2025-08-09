@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Palette, Code, Mountain, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/front-image.jpg";
 
 const Index = () => {
   return (

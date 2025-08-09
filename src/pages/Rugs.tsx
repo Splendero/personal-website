@@ -1,23 +1,24 @@
 import ImageGallery from "@/components/ImageGallery";
+import doomRug from "@/assets/Rugs/doom-rug.png";
+import speakerRug from "@/assets/Rugs/speaker-rug.png"
 
 const Rugs = () => {
-  // Sample rug data - replace with your actual rug images
   const rugImages = [
     {
       id: "1",
-      src: "/placeholder.svg",
-      alt: "Geometric Pattern Rug",
-      caption: "Geometric Harmony",
-      dimensions: "4' x 6'",
-      materials: "Wool blend, natural dyes"
+      src: doomRug,
+      alt: "MF DOOM logo",
+      caption: "MF DOOM logo",
+      dimensions: "2' x 1'",
+      materials: "From MF DOOM famous logo"
     },
     {
       id: "2", 
-      src: "/placeholder.svg",
-      alt: "Floral Design Rug",
-      caption: "Garden Blooms",
-      dimensions: "5' x 8'",
-      materials: "Hand-spun wool"
+      src: speakerRug,
+      alt: "blonded speaker",
+      caption: "blonded speaker",
+      dimensions: "4' x 1.5'",
+      materials: "Inspired by covers from blonded radio"
     },
     {
       id: "3",
