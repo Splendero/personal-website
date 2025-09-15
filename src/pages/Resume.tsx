@@ -2,13 +2,14 @@ import { Download, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import resumePdf from '@/assets/Resume_2025_v1.pdf';
+
 
 const Resume = () => {
   const handleDownload = () => {
-    // Replace with actual resume file path
     const link = document.createElement('a');
-    link.href = '/resume.pdf'; // Place your resume PDF in the public folder
-    link.download = 'Your_Name_Resume.pdf';
+    link.href = resumePdf;
+    link.download = 'spencer_osborn_resume.pdf';
     link.click();
   };
 
@@ -35,22 +36,22 @@ const Resume = () => {
         <Card className="mb-8 bg-gradient-warm border-border/50">
           <CardContent className="p-8">
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold text-foreground mb-2">Your Name</h2>
-              <p className="text-xl text-muted-foreground">Full Stack Developer & Fiber Artist</p>
+              <h2 className="text-3xl font-bold text-foreground mb-2">Spencer Osborn</h2>
+              <p className="text-xl text-muted-foreground">Applied Math & Engineering Student</p>
             </div>
             
             <div className="flex flex-wrap justify-center gap-6 text-muted-foreground">
               <div className="flex items-center">
                 <Mail size={18} className="mr-2" />
-                <span>your.email@example.com</span>
+                <span>spencer.osborn@queensu.ca</span>
               </div>
               <div className="flex items-center">
                 <Phone size={18} className="mr-2" />
-                <span>(555) 123-4567</span>
+                <span>289 681 0801</span>
               </div>
               <div className="flex items-center">
                 <MapPin size={18} className="mr-2" />
-                <span>Your City, State</span>
+                <span>Oakville, Ontario</span>
               </div>
             </div>
           </CardContent>
@@ -63,10 +64,9 @@ const Resume = () => {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed text-lg">
-              Passionate full-stack developer with 5+ years of experience creating innovative web applications 
-              and digital solutions. Combines technical expertise with creative problem-solving skills developed 
-              through fiber arts and craftsmanship. Experienced in modern web technologies, agile development, 
-              and creating user-centered designs that balance functionality with aesthetic appeal.
+              Eager full-stack software engineer student on a year long internship doing medical AI solutions for hospital E-Referrals.
+              Where I study mathematics and engineering, which is a unique program that cover all major math and computer engineering topics in the department of engineering.
+              Always looking to build, create, and work on cool projects using my math, software, and computer engineering experience.
             </p>
           </CardContent>
         </Card>
@@ -75,42 +75,30 @@ const Resume = () => {
           {/* Experience */}
           <Card className="bg-gradient-warm border-border/50">
             <CardHeader>
-              <CardTitle className="text-2xl text-foreground">Experience</CardTitle>
+              <CardTitle className="text-2xl text-foreground">Professional Experience</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
-                <h3 className="text-xl font-semibold text-foreground">Senior Frontend Developer</h3>
-                <p className="text-primary font-medium">Tech Company • 2022 - Present</p>
+                <h3 className="text-xl font-semibold text-foreground">Artificial Intelligence Software Engineering Intern</h3>
+                <p className="text-primary font-medium">Novari Health • May 2025 - May 2026</p>
                 <ul className="mt-2 text-muted-foreground space-y-1">
-                  <li>• Led development of responsive web applications using React and TypeScript</li>
-                  <li>• Improved application performance by 40% through optimization techniques</li>
-                  <li>• Mentored junior developers and conducted code reviews</li>
+                  <li>• Contributed to the development of Intelligent Document Processing (IDP) and Auto-Protocolling tools, using Azure and open-source frameworks to integrate AI capabilities into Novari Health’s software suite.</li>
+                  <li>• Built and maintained internal metrics and monitoring tools for real time performance analysis of IDP and Auto-Protocolling systems, with outage and under performance alerting.</li>
+                  <li>• Led the launch of IDP v3, redesigning the system to reduce dependencies and cut cloud costs by 82%, leveraging open-source frameworks such as OpenCV and Tesseract.</li>
                 </ul>
               </div>
               
               <Separator />
               
               <div>
-                <h3 className="text-xl font-semibold text-foreground">Full Stack Developer</h3>
-                <p className="text-primary font-medium">Digital Agency • 2020 - 2022</p>
+                <h3 className="text-xl font-semibold text-foreground">Software Engineering Intern</h3>
+                <p className="text-primary font-medium">Limestone Analytics • Nov 2024 - May 2025</p>
                 <ul className="mt-2 text-muted-foreground space-y-1">
-                  <li>• Built and maintained e-commerce platforms for various clients</li>
-                  <li>• Integrated payment systems and third-party APIs</li>
-                  <li>• Collaborated with designers to implement pixel-perfect interfaces</li>
+                  <li>• Built Python scripts to efficiently filter, sort, analyze, and update millions of rows of data, streamlining workflows and enabling timely, data-driven insights, using google sheets workflows</li>
+                  <li>• Developed a lightweight repository system to organize and manage data analysis tools, enabling better software reuse and version control</li>
                 </ul>
               </div>
-              
               <Separator />
-              
-              <div>
-                <h3 className="text-xl font-semibold text-foreground">Junior Web Developer</h3>
-                <p className="text-primary font-medium">Startup Company • 2019 - 2020</p>
-                <ul className="mt-2 text-muted-foreground space-y-1">
-                  <li>• Developed interactive web components using JavaScript and CSS</li>
-                  <li>• Assisted in database design and backend API development</li>
-                  <li>• Participated in agile development processes and daily standups</li>
-                </ul>
-              </div>
             </CardContent>
           </Card>
 
@@ -123,19 +111,20 @@ const Resume = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground">Bachelor of Computer Science</h3>
-                  <p className="text-primary font-medium">University Name • 2015 - 2019</p>
-                  <p className="text-muted-foreground">Magna Cum Laude, 3.8 GPA</p>
+                  <h3 className="text-xl font-semibold text-foreground">Bachelors of Applied Science</h3>
+                  <p className="text-primary font-medium">Queen's University • 2022 - 2026</p>
+                  <p className="text-muted-foreground">Mathematics and Engineering (Communications and Computing)</p>
                 </div>
                 
                 <Separator />
                 
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground">Certifications</h3>
+                  <h3 className="text-xl font-semibold text-foreground">Design Teams & Activites</h3>
                   <ul className="mt-2 text-muted-foreground space-y-1">
-                    <li>• AWS Certified Developer</li>
-                    <li>• Google Analytics Certified</li>
-                    <li>• Scrum Master Certification</li>
+                    <li>• aQuatonomous</li>
+                    <li>• Clark Hall Pub</li>
+                    <li>• Smith Engineering Hyperloop Design Team</li>
+                    <li>• Englinks Tutoring</li>
                   </ul>
                 </div>
               </CardContent>
@@ -148,60 +137,28 @@ const Resume = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">Frontend</h4>
-                  <p className="text-muted-foreground">React, Vue.js, TypeScript, HTML5, CSS3, Tailwind CSS, SASS</p>
+                  <h4 className="font-semibold text-foreground mb-2">Languages</h4>
+                  <p className="text-muted-foreground">Java, Python, C, C++, C#, HTML, Javascript, PHP, MATLAB, LaTeX.</p>
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">Backend</h4>
-                  <p className="text-muted-foreground">Node.js, Python, Express.js, Django, REST APIs, GraphQL</p>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Database</h4>
-                  <p className="text-muted-foreground">PostgreSQL, MongoDB, Redis, Supabase, Firebase</p>
+                  <h4 className="font-semibold text-foreground mb-2">Libraries</h4>
+                  <p className="text-muted-foreground"> Numpy, OpenCV, Pandas, TensorFlow, Tesseract</p>
                 </div>
                 
                 <div>
                   <h4 className="font-semibold text-foreground mb-2">Tools</h4>
-                  <p className="text-muted-foreground">Git, Docker, AWS, Vercel, Figma, Webpack, Vite</p>
+                  <p className="text-muted-foreground">Azure, MS Office, Git, Docker, Linux, AutoCAD, SOLIDWORKS, SLAM, Arduino, ROS2</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Courses</h4>
+                  <p className="text-muted-foreground">Real Analysis II, Algorithms, Control System, Probability II, Engineering Design & Practice III, Object Oriented Programming, Complex Analysis, Linear Algebra II</p>
                 </div>
               </CardContent>
             </Card>
           </div>
         </div>
-
-        {/* Projects & Portfolio */}
-        <Card className="mt-8 bg-gradient-warm border-border/50">
-          <CardHeader>
-            <CardTitle className="text-2xl text-foreground">Featured Projects</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <h3 className="text-xl font-semibold text-foreground">Portfolio Website</h3>
-                <p className="text-muted-foreground">Personal portfolio showcasing development work and fiber arts</p>
-              </div>
-              <Button variant="outline" size="sm">
-                <ExternalLink size={16} className="mr-2" />
-                View
-              </Button>
-            </div>
-            
-            <Separator />
-            
-            <div className="flex items-center justify-between">
-              <div>
-                <h3 className="text-xl font-semibold text-foreground">E-commerce Platform</h3>
-                <p className="text-muted-foreground">Full-stack application with payment integration and admin dashboard</p>
-              </div>
-              <Button variant="outline" size="sm">
-                <ExternalLink size={16} className="mr-2" />
-                View
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </div>
   );

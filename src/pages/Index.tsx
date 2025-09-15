@@ -14,13 +14,12 @@ const Index = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                  Crafting with
-                  <span className="bg-gradient-primary bg-clip-text text-transparent"> passion</span>,
-                  coding with purpose
+                  Creating cool
+                  <span className="bg-gradient-primary bg-clip-text text-transparent"> things</span>,
+                  just for fun
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                  Welcome to my creative space where handcrafted rugs meet innovative projects. 
-                  Explore my journey through fiber arts, software development, and vertical adventures.
+                  Welcome to my personal website where I show off stuff some cool stuff that I've made.
                 </p>
               </div>
               

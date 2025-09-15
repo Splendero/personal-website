@@ -1,49 +1,53 @@
 import { Play, MapPin, Calendar } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import batOverhang from "@/assets/Climbing-thumbnail/bat-overhang.jpg"
+import redDyno from "@/assets/Climbing-thumbnail/red-dyno.jpg"
+import pinkDyno from "@/assets/Climbing-thumbnail/pink-dyno.jpg"
+import redSwing from "@/assets/Climbing-thumbnail/red-swing.jpg"
 
 const Climbing = () => {
   // Sample climbing video data - replace with your actual videos
   const climbingVideos = [
     {
       id: "1",
-      title: "V6 Overhang Project",
-      location: "Local Climbing Gym",
-      date: "March 2024",
-      style: "Bouldering",
-      thumbnail: "/placeholder.svg",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual video
-      description: "Working through a challenging overhang problem with dynamic moves and precise footwork."
+      title: "V6 Bat Hang Project",
+      location: "Climber's Rock, Oakville",
+      date: "August 2024",
+      style: null,
+      thumbnail: batOverhang,
+      videoUrl: "https://youtube.com/shorts/ZAV8beX5H6Q?feature=share", // Replace with actual video
+      description: "Couldn't finish the climb, but easily my favourite move I've ever done."
     },
     {
       id: "2", 
-      title: "Outdoor Lead Climb",
-      location: "Red Rock Canyon, NV",
-      date: "February 2024",
-      style: "Sport Climbing",
-      thumbnail: "/placeholder.svg",
+      title: "V5 Dyno",
+      location: "Boiler Room, Kingston",
+      date: "June 2025",
+      style: null,
+      thumbnail: redDyno,
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      description: "Beautiful 5.10a route with stunning desert views and technical face climbing."
+      description: "Fun first move and then exhausting finish"
     },
     {
       id: "3",
-      title: "Competition Finals", 
-      location: "Regional Bouldering Comp",
-      date: "January 2024",
-      style: "Competition",
-      thumbnail: "/placeholder.svg",
+      title: "V4 Pink Dyno", 
+      location: "Climber's Rock, Oakville",
+      date: "August 2024",
+      style: null,  
+      thumbnail: pinkDyno,
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      description: "Finals round of the regional bouldering competition, attempting a tricky coordination problem."
+      description: "One of my first big dynos I landed",
     },
     {
       id: "4",
-      title: "First Flash V5",
-      location: "Local Climbing Gym", 
-      date: "December 2023",
-      style: "Bouldering",
-      thumbnail: "/placeholder.svg",
+      title: "V4-5 Swing Dyno",
+      location: "Boiler Room, Kingston", 
+      date: "July 2025",
+      style: null,
+      thumbnail: redSwing,
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      description: "Successfully flashing my first V5 boulder problem after months of training."
+      description: "I like the corner climbing, always have fun angles"
     }
   ];
 
@@ -61,8 +65,7 @@ const Climbing = () => {
             <span className="bg-gradient-primary bg-clip-text text-transparent"> Adventures</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Follow my climbing journey from indoor bouldering to outdoor adventures. 
-            Watch videos of sends, attempts, and the progression through different grades and styles.
+            A few of my favourite climbs, from the few videos I have taken.
           </p>
         </div>
 
@@ -123,34 +126,22 @@ const Climbing = () => {
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Climbing Stats</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-primary">V6</div>
+              <div className="text-3xl font-bold text-primary">V5</div>
               <div className="text-muted-foreground">Highest Boulder Grade</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-primary">5.11a</div>
+              <div className="text-3xl font-bold text-primary">5.11b</div>
               <div className="text-muted-foreground">Highest Route Grade</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-primary">3</div>
+              <div className="text-3xl font-bold text-primary">1</div>
               <div className="text-muted-foreground">Years Climbing</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-primary">12</div>
-              <div className="text-muted-foreground">Outdoor Trips</div>
+              <div className="text-3xl font-bold text-primary">2</div>
+              <div className="text-muted-foreground">Gyms Visited</div>
             </div>
           </div>
-        </div>
-
-        {/* Climbing Philosophy */}
-        <div className="mt-16 text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-6">Why I Climb</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Climbing is more than just a physical challenge—it's a mental puzzle that requires 
-            problem-solving, perseverance, and trust in yourself. Every route teaches patience, 
-            every fall builds resilience, and every send brings pure joy. Whether it's the 
-            meditative focus of bouldering or the sustained effort of sport climbing, 
-            each style offers its own rewards and lessons.
-          </p>
         </div>
       </div>
     </div>

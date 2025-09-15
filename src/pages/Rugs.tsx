@@ -1,6 +1,10 @@
 import ImageGallery from "@/components/ImageGallery";
 import doomRug from "@/assets/Rugs/doom-rug.png";
 import speakerRug from "@/assets/Rugs/speaker-rug.png"
+import bathroomRug from "@/assets/Rugs/bathroom-rug.png"
+import MountainRug from "@/assets/Rugs/mountain-rug.png"
+import strawberryRug from "@/assets/Rugs/strawberry-rug.png"
+import dogRug from "@/assets/Rugs/dog-rug.png"
 
 const Rugs = () => {
   const rugImages = [
@@ -22,35 +26,35 @@ const Rugs = () => {
     },
     {
       id: "3",
-      src: "/placeholder.svg", 
-      alt: "Abstract Modern Rug",
-      caption: "Modern Abstract",
-      dimensions: "3' x 5'",
-      materials: "Cotton and wool blend"
+      src: MountainRug,
+      alt: "mountain sunset", 
+      caption: "mountain sunset",
+      dimensions: "3' x 3'",
+      materials: "Handrawen for the homie Pe Stew"
     },
     {
       id: "4",
-      src: "/placeholder.svg",
-      alt: "Traditional Pattern Rug", 
-      caption: "Heritage Weave",
-      dimensions: "6' x 9'",
-      materials: "Pure wool, traditional techniques"
+      src: bathroomRug, 
+      alt: "okej dye",
+      caption: "okej dye",
+      dimensions: "2' x 3'",
+      materials: "Inspired from a okej design, tuffed then dyed"
     },
     {
       id: "5",
-      src: "/placeholder.svg",
-      alt: "Minimalist Rug",
-      caption: "Zen Simplicity", 
-      dimensions: "4' x 4'",
-      materials: "Organic cotton"
+      src: strawberryRug,
+      alt: "strawberry",
+      caption: "strawberry", 
+      dimensions: "2' x 2'",
+      materials: "Handrawen strawberry rug"
     },
     {
       id: "6",
-      src: "/placeholder.svg",
-      alt: "Colorful Pattern Rug",
-      caption: "Vibrant Tapestry",
-      dimensions: "5' x 7'", 
-      materials: "Merino wool, natural dyes"
+      src: dogRug,
+      alt: "dog wig",
+      caption: "dog wig",
+      dimensions: "3' x 2'", 
+      materials: "Dog wig for the homie Daveo"
     }
   ];
 

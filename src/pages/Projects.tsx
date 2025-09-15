@@ -4,50 +4,32 @@ const Projects = () => {
   // Sample project data - replace with your actual projects
   const projects = [
     {
-      title: "E-commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, shopping cart, and admin dashboard.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-      imageUrl: "/placeholder.svg"
+      title: "Bouy Detection System",
+      description: "Creating a system to detect buoys in the water for Roboboat 2025, with the fast possible detection rate.",
+      technologies: ["Ros2", "Python", "Linux", "Computer Vision"],
+      githubUrl: "https://github.com/aQuatonomous",
+      imageUrl: "src/assets/projects/right_1741317589892.jpg"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      technologies: ["Vue.js", "Firebase", "Vuetify", "PWA"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-      imageUrl: "/placeholder.svg"
+      title: "Neuroneck",
+      description: "A real-time neck brace training system for medical use. That won a hackathon and a 2000$ prize.",
+      technologies: ["Arduino", "Microcontroller", "Hackathon"],
+      githubUrl: "https://github.com/Splendero/hackathon1medsim",
+      imageUrl: "src/assets/projects/IMG_9137.jpg"
     },
     {
-      title: "Weather Dashboard",
-      description: "A responsive weather dashboard that provides detailed forecasts, interactive maps, and personalized weather alerts for multiple locations.",
+      title: "Malaria Simulation",
+      description: "A simulation of malaria spread in a population, using a Loyds agents model.",
       technologies: ["JavaScript", "OpenWeather API", "Chart.js", "CSS Grid"],
-      githubUrl: "https://github.com",
-      imageUrl: "/placeholder.svg"
+      githubUrl: "https://github.com/Splendero/osiris",
+      imageUrl: "src/assets/projects/Picture176875.png"
     },
     {
-      title: "Portfolio Website",
-      description: "A personal portfolio website built with modern web technologies, featuring smooth animations and optimized performance.",
-      technologies: ["React", "TypeScript", "Framer Motion", "Vite"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-      imageUrl: "/placeholder.svg"
-    },
-    {
-      title: "Blog CMS",
-      description: "A content management system for bloggers with markdown support, SEO optimization, and social media integration.",
-      technologies: ["Next.js", "Sanity", "GraphQL", "Vercel"],
-      githubUrl: "https://github.com",
-      imageUrl: "/placeholder.svg"
-    },
-    {
-      title: "Data Visualization Tool",
-      description: "An interactive data visualization platform that transforms complex datasets into beautiful, interactive charts and graphs.",
-      technologies: ["D3.js", "Python", "Flask", "PostgreSQL"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-      imageUrl: "/placeholder.svg"
+      title: "Catan Map Generator",
+      description: "Catan map generator for competitive catan, with custom rules.",
+      technologies: ["Javascript", "Python"],
+      liveUrl: "catan-map-maker-frontend.vercel.app",
+      imageUrl: "src/assets/projects/Screenshot 2025-09-15 171401.png"
     }
   ];
 
@@ -88,7 +70,7 @@ const Projects = () => {
             <div className="space-y-3">
               <h3 className="text-xl font-semibold text-foreground">Frontend</h3>
               <ul className="text-muted-foreground space-y-1">
-                <li>React / Vue.js</li>
+                <li>React</li>
                 <li>TypeScript</li>
                 <li>Tailwind CSS</li>
                 <li>Next.js</li>
@@ -99,8 +81,8 @@ const Projects = () => {
               <ul className="text-muted-foreground space-y-1">
                 <li>Node.js</li>
                 <li>Python</li>
-                <li>Express</li>
-                <li>GraphQL</li>
+                <li>C#</li>
+                <li>C++</li>
               </ul>
             </div>
             <div className="space-y-3">
@@ -115,10 +97,10 @@ const Projects = () => {
             <div className="space-y-3">
               <h3 className="text-xl font-semibold text-foreground">Tools</h3>
               <ul className="text-muted-foreground space-y-1">
-                <li>Git / GitHub</li>
+                <li>Git</li>
                 <li>Docker</li>
                 <li>AWS</li>
-                <li>Vercel</li>
+                <li>Azure</li>
               </ul>
             </div>
           </div>
