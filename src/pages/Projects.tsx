@@ -32,7 +32,7 @@ const Projects = () => {
       title: "Catan Map Generator",
       description: "Catan map generator for competitive catan, with custom rules.",
       technologies: ["Javascript", "Python"],
-      liveUrl: "catan-map-maker-frontend.vercel.app",
+      liveUrl: "https://catan-map-maker-frontend.vercel.app/",
       imageUrl: catanMapImage
     }
   ];
