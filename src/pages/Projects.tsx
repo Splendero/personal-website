@@ -1,4 +1,8 @@
 import ProjectCard from "@/components/ProjectCard";
+import buoyDetectionImage from "@/assets/projects/right_1741317589892.jpg";
+import neuroneckImage from "@/assets/projects/IMG_9137.jpg";
+import malariaSimImage from "@/assets/projects/Picture176875.png";
+import catanMapImage from "@/assets/projects/Screenshot 2025-09-15 171401.png";
 
 const Projects = () => {
   // Sample project data - replace with your actual projects
@@ -8,28 +12,28 @@ const Projects = () => {
       description: "Creating a system to detect buoys in the water for Roboboat 2025, with the fast possible detection rate.",
       technologies: ["Ros2", "Python", "Linux", "Computer Vision"],
       githubUrl: "https://github.com/aQuatonomous",
-      imageUrl: "src/assets/projects/right_1741317589892.jpg"
+      imageUrl: buoyDetectionImage
     },
     {
       title: "Neuroneck",
       description: "A real-time neck brace training system for medical use. That won a hackathon and a 2000$ prize.",
       technologies: ["Arduino", "Microcontroller", "Hackathon"],
       githubUrl: "https://github.com/Splendero/hackathon1medsim",
-      imageUrl: "src/assets/projects/IMG_9137.jpg"
+      imageUrl: neuroneckImage
     },
     {
       title: "Malaria Simulation",
       description: "A simulation of malaria spread in a population, using a Loyds agents model.",
       technologies: ["JavaScript", "OpenWeather API", "Chart.js", "CSS Grid"],
       githubUrl: "https://github.com/Splendero/osiris",
-      imageUrl: "src/assets/projects/Picture176875.png"
+      imageUrl: malariaSimImage
     },
     {
       title: "Catan Map Generator",
       description: "Catan map generator for competitive catan, with custom rules.",
       technologies: ["Javascript", "Python"],
       liveUrl: "catan-map-maker-frontend.vercel.app",
-      imageUrl: "src/assets/projects/Screenshot 2025-09-15 171401.png"
+      imageUrl: catanMapImage
     }
   ];
 

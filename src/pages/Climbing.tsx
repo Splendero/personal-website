@@ -26,7 +26,7 @@ const Climbing = () => {
       date: "June 2025",
       style: null,
       thumbnail: redDyno,
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://youtube.com/shorts/X19vW2NU_6o",
       description: "Fun first move and then exhausting finish"
     },
     {
@@ -36,7 +36,7 @@ const Climbing = () => {
       date: "August 2024",
       style: null,  
       thumbnail: pinkDyno,
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://youtube.com/shorts/fm4jfa9Vd80",
       description: "One of my first big dynos I landed",
     },
     {
@@ -46,7 +46,7 @@ const Climbing = () => {
       date: "July 2025",
       style: null,
       thumbnail: redSwing,
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://youtube.com/shorts/M9BkvwK0nCk",
       description: "I like the corner climbing, always have fun angles"
     }
   ];
