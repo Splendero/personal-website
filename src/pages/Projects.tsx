@@ -3,7 +3,7 @@ import buoyDetectionImage from "@/assets/projects/right_1741317589892.jpg";
 import neuroneckImage from "@/assets/projects/IMG_9137.jpg";
 import malariaSimImage from "@/assets/projects/Picture176875.png";
 import catanMapImage from "@/assets/projects/Screenshot 2025-09-15 171401.png";
-import ttcTransitImage from "@/assets/projects/TTC-Transit-Visualizer.png";
+import ttcTransitImage from "@/assets/projects/TTCTransitVisualizer.png";
 
 const Projects = () => {
   // Sample project data - replace with your actual projects
