@@ -3,6 +3,7 @@ import buoyDetectionImage from "@/assets/projects/right_1741317589892.jpg";
 import neuroneckImage from "@/assets/projects/IMG_9137.jpg";
 import malariaSimImage from "@/assets/projects/Picture176875.png";
 import catanMapImage from "@/assets/projects/Screenshot 2025-09-15 171401.png";
+import ttcTransitImage from "@/assets/projects/TTC-Transit-Visualizer.png";
 
 const Projects = () => {
   // Sample project data - replace with your actual projects
@@ -34,6 +35,13 @@ const Projects = () => {
       technologies: ["Javascript", "Python"],
       liveUrl: "https://catan-map-maker-frontend.vercel.app/",
       imageUrl: catanMapImage
+    },
+    {
+      title: "TTC Tansit Visualizer",
+      description: "A webpage showing real time data from the TTC buses and streetcars.",
+      technologies: ["HTML", "CSS", "Python", "SQL"],
+      liveUrl: "https://ttc-transit-visualizer.vercel.app/",
+      imageUrl: ttcTransitImage
     }
   ];
 
