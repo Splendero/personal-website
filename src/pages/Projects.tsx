@@ -41,6 +41,7 @@ const Projects = () => {
       description: "A webpage showing real time data from the TTC buses and streetcars.",
       technologies: ["HTML", "CSS", "Python", "SQL"],
       liveUrl: "https://ttc-transit-visualizer.vercel.app/",
+      githubUrl: "https://github.com/Splendero/TTCTransitVisualizer",
       imageUrl: ttcTransitImage
     }
   ];
