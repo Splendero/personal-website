@@ -2,7 +2,7 @@ import { Download, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import resumePdf from '@/assets/Resume_2025_v1.pdf';
+import resumePdf from '@/assets/Spencer_Osborn_Resume.pdf';
 
 
 const Resume = () => {

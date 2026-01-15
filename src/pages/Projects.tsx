@@ -7,8 +7,30 @@ import ttcTransitImage from "@/assets/projects/TTCTransitVisualizer.png";
 import instagramReelImage from "@/assets/projects/ai-image-detector.png";
 
 const Projects = () => {
-  // Sample project data - replace with your actual projects
   const projects = [
+    {
+      title: "Catan Map Generator",
+      description: "Catan map generator for competitive catan, with custom rules.",
+      technologies: ["Javascript", "Python"],
+      liveUrl: "https://catan-map-maker-frontend.vercel.app/",
+      imageUrl: catanMapImage
+    },
+    {
+      title: "TTC Tansit Visualizer",
+      description: "A webpage showing real time data from the TTC buses and streetcars.",
+      technologies: ["HTML", "CSS", "Python", "SQL"],
+      liveUrl: "https://ttc-transit-visualizer.vercel.app/",
+      githubUrl: "https://github.com/Splendero/TTCTransitVisualizer",
+      imageUrl: ttcTransitImage
+    },
+    {
+      title: "Instagram Reel Ai detector",
+      description: "A tool to detect if an Instagram reel is AI generated, from a screenshot",
+      technologies: ["Python", "OpenCV", "scikit-learn"],
+      liveUrl: "https://ai-image-detector-taupe.vercel.app/",
+      githubUrl: "https://github.com/Splendero/detecting-ai-reals",
+      imageUrl: instagramReelImage
+    },
     {
       title: "Bouy Detection System",
       description: "Creating a system to detect buoys in the water for Roboboat 2025, with the fast possible detection rate.",
@@ -29,29 +51,6 @@ const Projects = () => {
       technologies: ["JavaScript", "OpenWeather API", "Chart.js", "CSS Grid"],
       githubUrl: "https://github.com/Splendero/osiris",
       imageUrl: malariaSimImage
-    },
-    {
-      title: "Catan Map Generator",
-      description: "Catan map generator for competitive catan, with custom rules.",
-      technologies: ["Javascript", "Python"],
-      liveUrl: "https://catan-map-maker-frontend.vercel.app/",
-      imageUrl: catanMapImage
-    },
-    {
-      title: "TTC Tansit Visualizer",
-      description: "A webpage showing real time data from the TTC buses and streetcars.",
-      technologies: ["HTML", "CSS", "Python", "SQL"],
-      liveUrl: "https://ttc-transit-visualizer.vercel.app/",
-      githubUrl: "https://github.com/Splendero/TTCTransitVisualizer",
-      imageUrl: ttcTransitImage
-    },
-    {
-      title: "Instagram Reel Ai detector",
-      description: "A tool to detect if an Instagram reel is AI generated, from a screenshot",
-      technologies: ["Python", "OpenCV", "pytorch"],
-      liveUrl: "https://ai-image-detector-taupe.vercel.app/",
-      githubUrl: "https://github.com/Splendero/detecting-ai-reals",
-      imageUrl: instagramReelImage
     }
   ];
 

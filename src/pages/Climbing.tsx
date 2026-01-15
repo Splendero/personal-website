@@ -127,7 +127,7 @@ const Climbing = () => {
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Climbing Stats</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-primary">V5</div>
+              <div className="text-3xl font-bold text-primary">V6</div>
               <div className="text-muted-foreground">Highest Boulder Grade</div>
             </div>
             <div className="text-center space-y-2">
@@ -135,11 +135,11 @@ const Climbing = () => {
               <div className="text-muted-foreground">Highest Route Grade</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-primary">1</div>
+              <div className="text-3xl font-bold text-primary">2</div>
               <div className="text-muted-foreground">Years Climbing</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-primary">2</div>
+              <div className="text-3xl font-bold text-primary">5</div>
               <div className="text-muted-foreground">Gyms Visited</div>
             </div>
           </div>
