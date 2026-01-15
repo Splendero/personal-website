@@ -4,6 +4,7 @@ import neuroneckImage from "@/assets/projects/IMG_9137.jpg";
 import malariaSimImage from "@/assets/projects/Picture176875.png";
 import catanMapImage from "@/assets/projects/Screenshot 2025-09-15 171401.png";
 import ttcTransitImage from "@/assets/projects/TTCTransitVisualizer.png";
+import instagramReelImage from "@/assets/projects/ai-image-detector.png";
 
 const Projects = () => {
   // Sample project data - replace with your actual projects
@@ -43,6 +44,14 @@ const Projects = () => {
       liveUrl: "https://ttc-transit-visualizer.vercel.app/",
       githubUrl: "https://github.com/Splendero/TTCTransitVisualizer",
       imageUrl: ttcTransitImage
+    },
+    {
+      title: "Instagram Reel Ai detector",
+      description: "A tool to detect if an Instagram reel is AI generated, from a screenshot",
+      technologies: ["Python", "OpenCV", "pytorch"],
+      liveUrl: "https://ai-image-detector-taupe.vercel.app/",
+      githubUrl: "https://github.com/Splendero/detecting-ai-reals",
+      imageUrl: instagramReelImage
     }
   ];
 
