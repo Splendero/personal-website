@@ -4,17 +4,18 @@ import neuroneckImage from "@/assets/projects/IMG_9137.jpg";
 import malariaSimImage from "@/assets/projects/Picture176875.png";
 import catanMapImage from "@/assets/projects/Screenshot 2025-09-15 171401.png";
 import ttcTransitImage from "@/assets/projects/TTCTransitVisualizer.png";
-import instagramReelImage from "@/assets/projects/ai-image-detector.png";
+import fhirGoalTrackerImage from "@/assets/projects/fhir-image.png";
 
 const Projects = () => {
   const projects = [
     {
-      title: "Catan Map Generator",
-      description: "Catan map generator for competitive catan, with custom rules.",
-      technologies: ["Javascript", "Python"],
-      liveUrl: "https://catan-map-maker-frontend.vercel.app/",
-      imageUrl: catanMapImage
-    },
+      title: "FHIR Goal Tracker",
+      description: "A backend system that stores patients, goals, and observations",
+      technologies: ["Go", "PostgreSQL", "FHIR"],
+      liveUrl: "https://fhir-goals-project-production.up.railway.app/",
+      githubUrl: "https://github.com/Splendero/FHIR-goals-project",
+      imageUrl: fhirGoalTrackerImage
+    }, 
     {
       title: "TTC Tansit Visualizer",
       description: "A webpage showing real time data from the TTC buses and streetcars.",
@@ -24,19 +25,18 @@ const Projects = () => {
       imageUrl: ttcTransitImage
     },
     {
-      title: "Instagram Reel Ai detector",
-      description: "A tool to detect if an Instagram reel is AI generated, from a screenshot",
-      technologies: ["Python", "OpenCV", "scikit-learn"],
-      liveUrl: "https://ai-image-detector-taupe.vercel.app/",
-      githubUrl: "https://github.com/Splendero/detecting-ai-reals",
-      imageUrl: instagramReelImage
-    },
-    {
       title: "Bouy Detection System",
       description: "Creating a system to detect buoys in the water for Roboboat 2025, with the fast possible detection rate.",
       technologies: ["Ros2", "Python", "Linux", "Computer Vision"],
       githubUrl: "https://github.com/aQuatonomous",
       imageUrl: buoyDetectionImage
+    },
+    {
+      title: "Catan Map Generator",
+      description: "Catan map generator for competitive catan, with custom rules.",
+      technologies: ["Javascript", "Python"],
+      liveUrl: "https://catan-map-maker-frontend.vercel.app/",
+      imageUrl: catanMapImage
     },
     {
       title: "Neuroneck",
