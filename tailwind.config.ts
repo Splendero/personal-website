@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['"Atkinson Hyperlegible Next"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				mono: ['"Atkinson Hyperlegible Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -26,8 +30,7 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))',
-					glow: 'hsl(var(--primary-glow))'
+					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -53,6 +56,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				sign: {
+					DEFAULT: 'hsl(var(--sign))',
+					foreground: 'hsl(var(--sign-foreground))',
+					muted: 'hsl(var(--sign-muted))',
+					cell: 'hsl(var(--sign-cell))'
+				},
+				line: {
+					1: { DEFAULT: 'hsl(var(--line-1))', ink: 'hsl(var(--line-1-ink))' },
+					2: { DEFAULT: 'hsl(var(--line-2))', ink: 'hsl(var(--line-2-ink))' },
+					3: { DEFAULT: 'hsl(var(--line-3))', ink: 'hsl(var(--line-3-ink))' },
+					4: { DEFAULT: 'hsl(var(--line-4))', ink: 'hsl(var(--line-4-ink))' }
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -68,18 +83,6 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
-			},
-			backgroundImage: {
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-subtle': 'var(--gradient-subtle)',
-				'gradient-warm': 'var(--gradient-warm)'
-			},
-			boxShadow: {
-				'soft': 'var(--shadow-soft)',
-				'gallery': 'var(--shadow-gallery)'
-			},
-			transitionTimingFunction: {
-				'smooth': 'var(--transition-smooth)'
 			},
 			keyframes: {
 				'accordion-down': {

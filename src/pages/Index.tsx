@@ -1,126 +1,45 @@
-import { Link } from "react-router-dom";
-import { ArrowRight, Palette, Code, Mountain, FileText } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import heroImage from "@/assets/front-image.jpg";
+import portrait from "@/assets/front-image.jpg?w=900&format=webp";
+import { DepartureBoard } from "@/components/transit/DepartureBoard";
+import { ServiceNotice } from "@/components/transit/ServiceNotice";
+import { NOW_LINE, SERVICE_NOTICE } from "@/data/site";
 
-const Index = () => {
-  return (
-    <div className="min-h-screen bg-gradient-subtle">
-      {/* Hero Section */}
-      <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                  Creating cool
-                  <span className="bg-gradient-primary bg-clip-text text-transparent"> things</span>,
-                  just for fun
-                </h1>
-                <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                  Welcome to my personal website where I show off stuff some cool stuff that I've made.
-                </p>
-              </div>
-              
-              <div className="flex flex-wrap gap-4">
-                <Button 
-                  asChild 
-                  size="lg" 
-                  className="bg-gradient-primary hover:opacity-90 transition-opacity"
-                >
-                  <Link to="/rugs">
-                    View My Rugs
-                    <ArrowRight className="ml-2" size={20} />
-                  </Link>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <Link to="/projects">Explore Projects</Link>
-                </Button>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-2xl shadow-gallery">
-                <img
-                  src={heroImage}
-                  alt="Handcrafted rugs and textiles"
-                  className="w-full h-96 lg:h-[500px] object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              </div>
-            </div>
-          </div>
+const Index = () => (
+  <div className="mx-auto max-w-6xl px-4 pt-10 sm:px-8 sm:pt-16">
+    <section className="grid items-end gap-8 md:grid-cols-[1fr_auto] md:gap-12">
+      <div>
+        <p className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-muted-foreground">Spencer Osborn</p>
+        <h1 className="mt-3 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl">
+          Creating cool things, just for fun.
+        </h1>
+        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
+          Welcome to my personal website, where I show off some cool stuff I've made.
+        </p>
+        <p className="mt-4 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-base">
+          <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">Now</span>
+          {NOW_LINE}
+        </p>
+      </div>
+      <figure className="w-44 sm:w-56 md:w-64">
+        <div className="overflow-hidden rounded-lg border-[6px] border-sign">
+          <img
+            src={portrait}
+            alt="Portrait of Spencer Osborn on the Kingston waterfront"
+            className="aspect-[4/5] w-full object-cover"
+          />
         </div>
-      </section>
+        <figcaption className="mt-2 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+          Kingston, ON
+        </figcaption>
+      </figure>
+    </section>
 
-      {/* Quick Links Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Explore My Work</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Discover the different facets of my creative and professional journey
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="group hover:shadow-gallery transition-all duration-500 bg-gradient-warm border-border/50 hover:border-primary/20">
-              <CardContent className="p-6 text-center space-y-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <Palette className="text-primary-foreground" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground">Rug Gallery</h3>
-                <p className="text-muted-foreground">Handwoven rugs and textile artworks</p>
-                <Button variant="ghost" asChild className="mt-4 hover:text-primary">
-                  <Link to="/rugs">View Gallery</Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-gallery transition-all duration-500 bg-gradient-warm border-border/50 hover:border-primary/20">
-              <CardContent className="p-6 text-center space-y-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <Code className="text-primary-foreground" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground">Projects</h3>
-                <p className="text-muted-foreground">Software development and creative coding</p>
-                <Button variant="ghost" asChild className="mt-4 hover:text-primary">
-                  <Link to="/projects">View Projects</Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-gallery transition-all duration-500 bg-gradient-warm border-border/50 hover:border-primary/20">
-              <CardContent className="p-6 text-center space-y-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <Mountain className="text-primary-foreground" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground">Climbing</h3>
-                <p className="text-muted-foreground">Bouldering and climbing adventures</p>
-                <Button variant="ghost" asChild className="mt-4 hover:text-primary">
-                  <Link to="/climbing">Watch Videos</Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-gallery transition-all duration-500 bg-gradient-warm border-border/50 hover:border-primary/20">
-              <CardContent className="p-6 text-center space-y-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <FileText className="text-primary-foreground" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground">Resume</h3>
-                <p className="text-muted-foreground">Professional experience and skills</p>
-                <Button variant="ghost" asChild className="mt-4 hover:text-primary">
-                  <Link to="/resume">View Resume</Link>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+    <div className="mt-10 sm:mt-14">
+      <DepartureBoard />
     </div>
-  );
-};
+    <div className="mt-6">
+      <ServiceNotice>{SERVICE_NOTICE}</ServiceNotice>
+    </div>
+  </div>
+);
 
 export default Index;

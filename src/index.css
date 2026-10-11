@@ -2,116 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Definition of the design system: transit signage. All colors MUST be HSL channels. */
 
 @layer base {
   :root {
-    /* Base colors - warm, earthy palette */
-    --background: 45 20% 98%;
-    --foreground: 25 15% 15%;
+    /* Signage white and near-black */
+    --background: 45 31% 95%;
+    --foreground: 225 8% 9%;
 
-    /* Card colors */
-    --card: 40 25% 96%;
-    --card-foreground: 25 15% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 225 8% 9%;
 
-    /* Popover colors */
-    --popover: 40 25% 96%;
-    --popover-foreground: 25 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 8% 9%;
 
-    /* Primary - warm terracotta */
-    --primary: 220 80% 60%;
-    --primary-foreground: 220 20% 98%;
-    --primary-glow: 220 90% 70%;
+    --primary: 225 8% 9%;
+    --primary-foreground: 45 31% 97%;
 
-    /* Secondary - sage green */
-    --secondary: 95 25% 85%;
-    --secondary-foreground: 25 15% 15%;
+    --secondary: 43 21% 90%;
+    --secondary-foreground: 225 8% 9%;
 
-    /* Muted - soft clay */
-    --muted: 35 30% 90%;
-    --muted-foreground: 25 15% 45%;
+    --muted: 43 21% 90%;
+    --muted-foreground: 225 4% 36%;
 
-    /* Accent - warm clay */
-    --accent: 25 45% 88%;
-    --accent-foreground: 25 15% 15%;
+    --accent: 48 100% 90%;
+    --accent-foreground: 225 8% 9%;
 
-    /* Destructive */
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 45 20% 98%;
+    --destructive: 0 72% 46%;
+    --destructive-foreground: 0 0% 100%;
 
-    /* Borders and inputs */
-    --border: 35 25% 88%;
-    --input: 35 25% 92%;
-    --ring: 15 75% 58%;
+    --border: 44 17% 82%;
+    --input: 44 17% 82%;
+    --ring: 203 100% 38%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
-    --gradient-warm: linear-gradient(45deg, hsl(210 100% 95%), hsl(220 80% 90%));
+    --radius: 0.5rem;
 
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.15);
-    --shadow-gallery: 0 8px 32px -8px hsl(var(--primary) / 0.2);
+    /* Black sign panels: departure board, station signs, footer */
+    --sign: 228 8% 10%;
+    --sign-foreground: 45 31% 96%;
+    --sign-muted: 45 8% 66%;
+    --sign-cell: 228 7% 16%;
 
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    --radius: 0.75rem;
+    /* Line colours, with the ink colour that reads on top of each */
+    --line-1: 47 100% 48%;
+    --line-1-ink: 225 8% 9%;
+    --line-2: 150 100% 25%;
+    --line-2-ink: 0 0% 100%;
+    --line-3: 291 46% 42%;
+    --line-3-ink: 0 0% 100%;
+    --line-4: 203 100% 38%;
+    --line-4-ink: 0 0% 100%;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    /* Dark mode with warm, rich tones */
-    --background: 25 30% 8%;
-    --foreground: 45 20% 95%;
+    --background: 228 8% 8%;
+    --foreground: 45 31% 95%;
 
-    --card: 25 25% 12%;
-    --card-foreground: 45 20% 95%;
+    --card: 228 7% 12%;
+    --card-foreground: 45 31% 95%;
 
-    --popover: 25 25% 12%;
-    --popover-foreground: 45 20% 95%;
+    --popover: 228 7% 12%;
+    --popover-foreground: 45 31% 95%;
 
-    --primary: 220 80% 65%;
-    --primary-foreground: 220 20% 8%;
-    --primary-glow: 220 90% 75%;
+    --primary: 45 31% 95%;
+    --primary-foreground: 228 8% 9%;
 
-    --secondary: 95 20% 20%;
-    --secondary-foreground: 45 20% 95%;
+    --secondary: 228 6% 18%;
+    --secondary-foreground: 45 31% 95%;
 
-    --muted: 25 20% 18%;
-    --muted-foreground: 45 15% 65%;
+    --muted: 228 6% 18%;
+    --muted-foreground: 45 8% 68%;
 
-    --accent: 25 30% 22%;
-    --accent-foreground: 45 20% 95%;
+    --accent: 47 60% 22%;
+    --accent-foreground: 45 31% 95%;
 
     --destructive: 0 62.8% 50%;
-    --destructive-foreground: 45 20% 95%;
+    --destructive-foreground: 45 31% 95%;
 
-    --border: 25 20% 20%;
-    --input: 25 20% 22%;
-    --ring: 15 75% 65%;
+    --border: 228 6% 22%;
+    --input: 228 6% 22%;
+    --ring: 203 100% 55%;
 
-    /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
-    --gradient-warm: linear-gradient(45deg, hsl(210 60% 20%), hsl(220 40% 25%));
+    --sign: 228 9% 5%;
+    --sign-foreground: 45 31% 96%;
+    --sign-muted: 45 8% 66%;
+    --sign-cell: 228 7% 13%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -129,6 +114,104 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 3px solid hsl(var(--line-4));
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: hsl(var(--line-1));
+    color: hsl(var(--line-1-ink));
+  }
+}
+
+@layer components {
+  .flap-cell {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.05em;
+    height: 1.5em;
+    border-radius: 3px;
+    background: hsl(var(--sign-cell));
+    color: hsl(var(--sign-foreground));
+    font-family: theme("fontFamily.mono");
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .flap-cell::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 50%;
+    height: 1px;
+    background: hsl(var(--sign) / 0.85);
+  }
+
+  .flap-accent .flap-cell {
+    color: hsl(var(--line-1));
+  }
+
+  .platform-tiles {
+    background-color: hsl(var(--card));
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.7) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.7) 1px, transparent 1px);
+    background-size: 56px 28px;
+  }
+
+  .vt-site-nav {
+    view-transition-name: site-nav;
+  }
+
+  .vt-station-sign {
+    view-transition-name: station-sign;
+  }
+}
+
+@keyframes vt-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes vt-arrive {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) {
+    animation: 140ms ease-in both vt-fade-out;
+  }
+
+  ::view-transition-new(root) {
+    animation: 260ms cubic-bezier(0.2, 0.7, 0.2, 1) both vt-arrive;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
   }
 }
