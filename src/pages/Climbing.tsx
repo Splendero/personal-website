@@ -1,149 +1,92 @@
-import { Play, MapPin, Calendar } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import batOverhang from "@/assets/Climbing-thumbnail/bat-overhang.jpg"
-import redDyno from "@/assets/Climbing-thumbnail/red-dyno.jpg"
-import pinkDyno from "@/assets/Climbing-thumbnail/pink-dyno.jpg"
-import redSwing from "@/assets/Climbing-thumbnail/red-swing.jpg"
+import { useState } from "react";
+import { MapPin, Calendar, Play } from "lucide-react";
+import { CorridorMap } from "@/components/transit/CorridorMap";
+import { GradeLine } from "@/components/transit/GradeLine";
+import { ServiceInfo } from "@/components/transit/ServiceInfo";
+import { StationSign } from "@/components/transit/StationSign";
+import { CLIMB_STATS, CLIMBING_INTRO, CLIMBS, GRADE_MILESTONES } from "@/data/site";
+import { cn } from "@/lib/utils";
 
 const Climbing = () => {
-  // Sample climbing video data - replace with your actual videos
-  const climbingVideos = [
-    {
-      id: "1",
-      title: "V6 Bat Hang Project",
-      location: "Climber's Rock, Oakville",
-      date: "August 2024",
-      style: null,
-      thumbnail: batOverhang,
-      videoUrl: "https://youtube.com/shorts/ZAV8beX5H6Q?feature=share", // Replace with actual video
-      description: "Couldn't finish the climb, but easily my favourite move I've ever done."
-    },
-    {
-      id: "2", 
-      title: "V5 Dyno",
-      location: "Boiler Room, Kingston",
-      date: "June 2025",
-      style: null,
-      thumbnail: redDyno,
-      videoUrl: "https://youtube.com/shorts/X19vW2NU_6o",
-      description: "Fun first move and then exhausting finish"
-    },
-    {
-      id: "3",
-      title: "V4 Pink Dyno", 
-      location: "Climber's Rock, Oakville",
-      date: "August 2024",
-      style: null,  
-      thumbnail: pinkDyno,
-      videoUrl: "https://youtube.com/shorts/fm4jfa9Vd80",
-      description: "One of my first big dynos I landed",
-    },
-    {
-      id: "4",
-      title: "V4-5 Swing Dyno",
-      location: "Boiler Room, Kingston", 
-      date: "July 2025",
-      style: null,
-      thumbnail: redSwing,
-      videoUrl: "https://youtube.com/shorts/M9BkvwK0nCk",
-      description: "I like the corner climbing, always have fun angles"
-    }
-  ];
-
-  const handleVideoClick = (videoUrl: string) => {
-    window.open(videoUrl, '_blank');
-  };
+  const [selectedId, setSelectedId] = useState(CLIMBS[0].id);
 
   return (
-    <div className="min-h-screen bg-gradient-subtle pt-24 pb-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-            Climbing
-            <span className="bg-gradient-primary bg-clip-text text-transparent"> Adventures</span>
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A few of my favourite climbs, from the few videos I have taken.
-          </p>
-        </div>
+    <div className="mx-auto max-w-6xl px-4 pt-10 sm:px-8 sm:pt-14">
+      <StationSign line={3} name="Climbing" subtitle={CLIMBING_INTRO} />
 
-        {/* Videos Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {climbingVideos.map((video) => (
-            <Card 
-              key={video.id} 
-              className="group overflow-hidden hover:shadow-gallery transition-all duration-500 bg-gradient-warm border-border/50 hover:border-primary/20 cursor-pointer"
-              onClick={() => handleVideoClick(video.videoUrl)}
-            >
-              <div className="relative overflow-hidden">
-                <img
-                  src={video.thumbnail}
-                  alt={video.title}
-                  loading="lazy"
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Button 
-                    size="lg"
-                    className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white border-white/20"
-                  >
-                    <Play className="mr-2" size={20} />
-                    Watch Video
-                  </Button>
-                </div>
-                <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-2 py-1 rounded text-sm font-medium">
-                  {video.style}
-                </div>
-              </div>
-              
-              <CardContent className="p-6 space-y-4">
-                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
-                  {video.title}
-                </h3>
-                
-                <div className="space-y-2">
-                  <div className="flex items-center text-muted-foreground text-sm">
-                    <MapPin size={16} className="mr-2" />
-                    {video.location}
-                  </div>
-                  <div className="flex items-center text-muted-foreground text-sm">
-                    <Calendar size={16} className="mr-2" />
-                    {video.date}
-                  </div>
-                </div>
-                
-                <p className="text-muted-foreground leading-relaxed">
-                  {video.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+      <section aria-labelledby="grade-line-heading" className="mt-10 rounded-xl border border-foreground/15 bg-card p-4 sm:p-6">
+        <h2 id="grade-line-heading" className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-muted-foreground">
+          Grade line · V-scale
+        </h2>
+        <GradeLine milestones={GRADE_MILESTONES} />
+        <p className="mt-1 text-sm text-muted-foreground">
+          When I first sent each grade. Dashed ring: not there yet.
+        </p>
+      </section>
 
-        {/* Climbing Stats */}
-        <div className="bg-gradient-warm rounded-2xl p-8 md:p-12">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Climbing Stats</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-primary">V6</div>
-              <div className="text-muted-foreground">Highest Boulder Grade</div>
-            </div>
-            <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-primary">5.11b</div>
-              <div className="text-muted-foreground">Highest Route Grade</div>
-            </div>
-            <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-primary">2</div>
-              <div className="text-muted-foreground">Years Climbing</div>
-            </div>
-            <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-primary">5</div>
-              <div className="text-muted-foreground">Gyms Visited</div>
-            </div>
+      <ul className="mt-8 grid gap-6 md:grid-cols-2">
+        {CLIMBS.map((climb) => {
+          const active = climb.id === selectedId;
+          return (
+            <li key={climb.id} id={`climb-${climb.id}`} className="scroll-mt-24">
+              <a
+                href={climb.videoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => setSelectedId(climb.id)}
+                onFocus={() => setSelectedId(climb.id)}
+                className={cn(
+                  "group block overflow-hidden rounded-xl border bg-card transition-shadow",
+                  active ? "border-transparent ring-[3px] ring-line-3" : "border-foreground/15",
+                )}
+              >
+                <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                  <img
+                    src={climb.thumbnail}
+                    alt=""
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                  <span className="absolute left-4 top-4 rounded-md bg-sign px-2.5 py-1 font-mono text-sm font-bold text-sign-foreground">
+                    {climb.grade}
+                  </span>
+                  <span className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-sign/85 px-3.5 py-1.5 text-sm font-semibold text-sign-foreground">
+                    <Play aria-hidden="true" className="h-4 w-4" /> Watch clip
+                  </span>
+                </div>
+                <div className="space-y-3 p-5 sm:p-6">
+                  <h2 className="text-xl font-bold">
+                    {climb.title}
+                    {climb.project && <span className="ml-2 align-middle text-sm font-normal text-muted-foreground">(project)</span>}
+                  </h2>
+                  <div className="flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted-foreground">
+                    <span className="inline-flex items-center gap-1.5">
+                      <MapPin aria-hidden="true" className="h-4 w-4" />
+                      {climb.location}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5">
+                      <Calendar aria-hidden="true" className="h-4 w-4" />
+                      {climb.date}
+                    </span>
+                  </div>
+                  <p className="leading-relaxed text-muted-foreground">{climb.description}</p>
+                </div>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+
+      <div className="mt-10 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
+        <section aria-labelledby="corridor-heading" className="rounded-xl border border-foreground/15 bg-card p-4 sm:p-6">
+          <h2 id="corridor-heading" className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-muted-foreground">
+            Gyms I've climbed at
+          </h2>
+          <div className="mt-2">
+            <CorridorMap />
           </div>
-        </div>
+        </section>
+        <ServiceInfo title="Service information" stats={CLIMB_STATS} />
       </div>
     </div>
   );
